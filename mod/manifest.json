@@ -1,0 +1,25 @@
+{
+  "id": "neo.file-maze",
+  "name": "ファイル迷路",
+  "version": "2.0.0",
+  "apiVersion": 1,
+  "entry": "index.js",
+  "uses": ["tree", "quickAccess", "modified", "size"],
+  "location": "none",
+  "description": "壁にファイル名が刻まれた迷路。新しいファイルから、長く開いていないファイルまで、分かれ道だらけの迷路を抜けるとコインがもらえます。読むのは名前と日付だけで、中身は読まず、ファイルは変えません。通信はしません",
+  "settings": [
+    {
+      "key": "speed",
+      "label": "歩く速さ",
+      "type": "choice",
+      "default": "normal",
+      "options": [
+        { "value": "slow", "label": "ゆっくり" },
+        { "value": "normal", "label": "ふつう" },
+        { "value": "fast", "label": "はやい" }
+      ]
+    },
+    { "key": "mouse", "label": "マウスの押しっぱなしでも動く", "type": "boolean", "default": true },
+    { "key": "treeDepth", "label": "調べる階層の深さ", "type": "number", "default": 4, "min": 2, "max": 5, "step": 1 }
+  ]
+}
